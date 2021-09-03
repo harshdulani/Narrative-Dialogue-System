@@ -5,9 +5,9 @@ public class TypeWriter : MonoBehaviour
 {
     [SerializeField] private float _typingSpeed = 50f;
     
-    public void Run(string text, UnityEngine.UI.Text textBox)
-    {
-        StartCoroutine(Typer(text, textBox));
+    public Coroutine Run(string text, UnityEngine.UI.Text textBox)
+    { 
+	    return StartCoroutine(Typer(text, textBox));
     }
 
     private IEnumerator Typer(string text, UnityEngine.UI.Text textBox)

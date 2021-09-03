@@ -4,21 +4,13 @@
     <e p="C:\Users\Harsh Dulani\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Harsh Dulani\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Narrative.-861321355.00" t="ExcludeRecursive" />
     <e p="D:\unity\Narrative" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="DialogueSystem" t="Include">
+            <e p="DialogueObject.cs" t="Include" />
             <e p="DialogueUI.cs" t="Include" />
             <e p="TypeWriter.cs" t="Include" />
-          </e>
-        </e>
-        <e p="TutorialInfo" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="Editor" t="Include">
-              <e p="ReadmeEditor.cs" t="Include" />
-            </e>
-            <e p="Readme.cs" t="Include" />
           </e>
         </e>
       </e>
