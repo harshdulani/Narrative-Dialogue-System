@@ -4,8 +4,10 @@ using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
+	[SerializeField] private GameObject dialogueBox;
 	[SerializeField] private Text dialogueText;
-	[SerializeField] private DialogueObject testDialogue;
+
+	public bool isOpen { get; private set; }
 	
 	private TypeWriter _writer;
 	private ResponseHandler _responseHandler;
@@ -16,15 +18,8 @@ public class DialogueUI : MonoBehaviour
 		_responseHandler = GetComponent<ResponseHandler>();
 		
 		CloseDialogueBox();
-		ShowDialogue(testDialogue);
 	}
-
-	public void ShowDialogue(DialogueObject dialogueObject)
-	{
-		dialogueText.gameObject.SetActive(true);
-		StartCoroutine(StepThroughDialogue(dialogueObject));
-	}
-
+	
 	private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
 	{
 
@@ -47,9 +42,17 @@ public class DialogueUI : MonoBehaviour
 		CloseDialogueBox();
 	}
 
+	public void ShowDialogue(DialogueObject dialogueObject)
+	{
+		isOpen = true;
+		dialogueBox.SetActive(true);
+		StartCoroutine(StepThroughDialogue(dialogueObject));
+	}
+
 	private void CloseDialogueBox()
 	{
-		dialogueText.gameObject.SetActive(false);
+		isOpen = false;
+		dialogueBox.SetActive(false);
 		dialogueText.text = string.Empty;
 	}
 }

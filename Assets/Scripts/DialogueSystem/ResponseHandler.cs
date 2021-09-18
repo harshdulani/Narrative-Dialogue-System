@@ -40,7 +40,7 @@ public class ResponseHandler : MonoBehaviour
 
 	private void OnPickedResponse(Response response)
 	{
-		responseBox.gameObject.SetActive(true);
+		responseBox.gameObject.SetActive(false);
 
 		foreach (var button in _tempResponseObjects)
 		{

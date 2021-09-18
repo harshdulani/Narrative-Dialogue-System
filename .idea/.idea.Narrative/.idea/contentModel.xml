@@ -8,12 +8,15 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="DialogueSystem" t="Include">
+            <e p="DialogueActivator.cs" t="Include" />
             <e p="DialogueObject.cs" t="Include" />
             <e p="DialogueUI.cs" t="Include" />
+            <e p="IInteractable.cs" t="Include" />
             <e p="Response.cs" t="Include" />
             <e p="ResponseHandler.cs" t="Include" />
             <e p="TypeWriter.cs" t="Include" />
           </e>
+          <e p="PlayerController.cs" t="Include" />
         </e>
       </e>
       <e p="Narrative.sln" t="IncludeFlat" />
