@@ -6,33 +6,50 @@ public class DialogueUI : MonoBehaviour
 {
 	[SerializeField] private Text dialogueText;
 	[SerializeField] private DialogueObject testDialogue;
+	
 	private TypeWriter _writer;
+	private ResponseHandler _responseHandler;
 	
 	private void Start()
 	{
 		_writer = GetComponent<TypeWriter>();
-		SetDialogueBoxActive(false);
+		_responseHandler = GetComponent<ResponseHandler>();
+		
+		CloseDialogueBox();
 		ShowDialogue(testDialogue);
 	}
 
-	private void ShowDialogue(DialogueObject dialogueObject)
+	public void ShowDialogue(DialogueObject dialogueObject)
 	{
+		dialogueText.gameObject.SetActive(true);
 		StartCoroutine(StepThroughDialogue(dialogueObject));
 	}
 
 	private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
 	{
-		SetDialogueBoxActive(true);
-		foreach (var dialogue in dialogueObject.Dialogue)
+
+		for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
 		{
+			string dialogue = dialogueObject.Dialogue[i];
 			yield return _writer.Run(dialogue, dialogueText);
+			
+			if(i == dialogueObject.Dialogue.Length - 1 && dialogueObject.HasResponses) break;
+			
 			yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 		}
-		SetDialogueBoxActive(false);
+		
+		if(dialogueObject.HasResponses)
+		{
+			_responseHandler.ShowResponses(dialogueObject.Responses);
+			yield break;
+		}
+
+		CloseDialogueBox();
 	}
 
-	private void SetDialogueBoxActive(bool status)
+	private void CloseDialogueBox()
 	{
-		dialogueText.gameObject.SetActive(status);
+		dialogueText.gameObject.SetActive(false);
+		dialogueText.text = string.Empty;
 	}
 }

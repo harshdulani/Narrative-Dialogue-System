@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="153c39bf-69a3-4155-98f1-6163ec5cde75" name="Default Changelist" comment="">
+    <list default="true" id="0ee978f5-e0b5-4616-9b91-1a637f18cfb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Dialogue/No.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Dialogue/No.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Dialogue/Yes.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Dialogue/Yes.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/Response.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/ResponseHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/ResponseHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Narrative/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogue/Dialogue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue/Dialogue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/TypeWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/TypeWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +30,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueSystem/TypeWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueSystem/ResponseHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueSystem/Response.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueObject.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -40,23 +39,22 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/TypeWriter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/DialogueUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSystem/ResponseHandler.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1xapjFaxon7R1eQjbagOEB9Jfw4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1yJalid5gRcWQ0n1prTI007EXwx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -79,19 +77,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -99,23 +85,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Added responses to dialogues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added responses to dialogues" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="375" y="0" width="727" height="720" key="#C#" timestamp="1630606500307">
+    <state x="184" y="5" key="SettingsEditor" timestamp="1631973946234">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="375" y="0" width="727" height="720" key="#C#/0.0.1366.720@0.0.1366.720" timestamp="1630606500307" />
-    <state x="184" y="5" key="SettingsEditor" timestamp="1630690200213">
-      <screen x="0" y="0" width="1366" height="720" />
-    </state>
-    <state x="184" y="5" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1630690200213" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1630689390382">
-      <screen x="0" y="0" width="1366" height="720" />
-    </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1630689390382" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1630605895693">
-      <screen x="0" y="0" width="1366" height="720" />
-    </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1630605895693" />
+    <state x="184" y="5" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1631973946234" />
   </component>
 </project>

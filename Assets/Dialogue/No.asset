@@ -10,13 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dcb0321bc0cb864fb77f47e1342e708, type: 3}
-  m_Name: Dialogue
+  m_Name: No
   m_EditorClassIdentifier: 
   dialogue:
-  - This is my first dialogue
-  - This would be my second dialogue then i guess
-  responses:
-  - responseText: Yes
-    dialogueObject: {fileID: 11400000, guid: eace5ada68a443744b9d0ffbc6e56dac, type: 2}
-  - responseText: No
-    dialogueObject: {fileID: 11400000, guid: 5f73178f5ea4fc9498b516c0ac300e22, type: 2}
+  - You Said No

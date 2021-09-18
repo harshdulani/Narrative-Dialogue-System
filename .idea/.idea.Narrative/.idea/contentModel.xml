@@ -10,13 +10,15 @@
           <e p="DialogueSystem" t="Include">
             <e p="DialogueObject.cs" t="Include" />
             <e p="DialogueUI.cs" t="Include" />
+            <e p="Response.cs" t="Include" />
+            <e p="ResponseHandler.cs" t="Include" />
             <e p="TypeWriter.cs" t="Include" />
           </e>
         </e>
       </e>
       <e p="Narrative.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="Packages" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
   </component>
