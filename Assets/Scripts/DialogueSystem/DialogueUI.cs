@@ -57,6 +57,11 @@ public class DialogueUI : MonoBehaviour
 		}
 	}
 
+	public void AddResponseEvents(ResponseEvent[] responseEvents)
+	{
+		_responseHandler.AddResponseEvents(responseEvents);
+	}
+	
 	public void ShowDialogue(DialogueObject dialogueObject)
 	{
 		isOpen = true;

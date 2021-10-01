@@ -2,11 +2,21 @@ using UnityEngine;
 
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
-	[SerializeField] private DialogueObject _dialogueObject;
+	[SerializeField] private DialogueObject dialogueObject;
+
+	public void UpdateDialogueObject(DialogueObject newDialogueObject)
+	{
+		dialogueObject = newDialogueObject;
+	}
 	
 	public void Interact(PlayerController player)
 	{
-		player.DialogueUi.ShowDialogue(_dialogueObject);
+		if (TryGetComponent(out DialogueResponseEvents events) && events.DialogueObject == dialogueObject)
+		{
+			player.DialogueUi.AddResponseEvents(events.Events);
+		}
+		
+		player.DialogueUi.ShowDialogue(dialogueObject);
 	}
 
 	private void OnTriggerEnter(Collider other)

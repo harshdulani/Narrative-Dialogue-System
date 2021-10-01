@@ -9,10 +9,10 @@ public class TypeWriter : MonoBehaviour
     
     public bool IsRunning { get; private set; }
 
-    private readonly Dictionary<HashSet<char>, float> _punctuations = new Dictionary<HashSet<char>, float>()
+    private readonly List<Punctuation> _punctuations = new List<Punctuation>()
     {
-	    {new HashSet<char>() {'.', '!', '?'}, 0.6f},
-	    {new HashSet<char>() {',', ';', ':'}, 0.3f},
+	    {new Punctuation(new HashSet<char>() {'.', '!', '?'}, 0.6f)},
+	    {new Punctuation(new HashSet<char>() {',', ';', ':'}, 0.3f)}
     };
 
     private Coroutine _typerCoroutine;
@@ -61,16 +61,27 @@ public class TypeWriter : MonoBehaviour
 
     private bool IsPunctuation(char candidate, out float waitTime)
     {
-	    foreach (var kvPair in _punctuations)
+	    foreach (var punctuation in _punctuations)
 	    {
-		    if (kvPair.Key.Contains(candidate))
-		    {
-			    waitTime = kvPair.Value;
-			    return true;
-		    }
+		    if (!punctuation.Punctuations.Contains(candidate)) continue;
+		    
+		    waitTime = punctuation.WaitTime;
+		    return true;
 	    }
 
 	    waitTime = default;
 	    return false;
+    }
+
+    private readonly struct Punctuation
+    {
+	    public readonly HashSet<char> Punctuations;
+	    public readonly float WaitTime;
+
+	    public Punctuation(HashSet<char> punctuations, float waitTime)
+	    {
+		    Punctuations = punctuations;
+		    WaitTime = waitTime;
+	    }
     }
 }

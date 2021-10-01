@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 public class ResponseHandler : MonoBehaviour
 {
@@ -10,24 +11,33 @@ public class ResponseHandler : MonoBehaviour
 	[SerializeField] private RectTransform responseContainer;
 
 	private DialogueUI _dialogueUi;
+	private List<Object> _tempResponseObjects = new List<Object>();
 
-	private List<GameObject> _tempResponseObjects= new List<GameObject>();
-	
+	private ResponseEvent[] _responseEvents;
+
 	private void Start()
 	{
 		_dialogueUi = GetComponent<DialogueUI>();
 	}
 
+	public void AddResponseEvents(ResponseEvent[] events)
+	{
+		_responseEvents = events;
+	}
+	
 	public void ShowResponses(Response[] responses)
 	{
 		var responseBoxHeight = 0f;
 
-		foreach (var response in responses)
+		for(int i =0; i < responses.Length; i++)
 		{
+			var response = responses[i];
+			var responseIndex = i;
+			
 			var responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
 			responseButton.gameObject.SetActive(true);
 			responseButton.GetComponent<Text>().text = response.ResponseText;
-			responseButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response));
+			responseButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response, responseIndex));
 
 			_tempResponseObjects.Add(responseButton);
 			
@@ -38,7 +48,7 @@ public class ResponseHandler : MonoBehaviour
 		responseBox.gameObject.SetActive(true);
 	}
 
-	private void OnPickedResponse(Response response)
+	private void OnPickedResponse(Response response, int responseIndex)
 	{
 		responseBox.gameObject.SetActive(false);
 
@@ -48,6 +58,9 @@ public class ResponseHandler : MonoBehaviour
 		}
 		_tempResponseObjects.Clear();
 
+		if (_responseEvents != null && responseIndex <= _responseEvents.Length)
+			_responseEvents[responseIndex].OnPickedResponse?.Invoke();
+		
 		_dialogueUi.ShowDialogue(response.DialogueObject);
 	}
 }

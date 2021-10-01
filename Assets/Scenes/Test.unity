@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afed12a4d10edb24bbe690a7307cfd4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _typingSpeed: 30
+  typingSpeed: 30
 --- !u!114 &576242349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 695051453}
   - component: {fileID: 695051452}
   - component: {fileID: 695051447}
+  - component: {fileID: 695051454}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -542,6 +543,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &695051454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695051446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d416e76e1df2d4a4fb67efaa56eac13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: 935910f1a9a10f5418a049976d0607f7, type: 2}
+  events:
+  - name: Yes
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 695051446}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: No
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &804550801
 GameObject:
   m_ObjectHideFlags: 0

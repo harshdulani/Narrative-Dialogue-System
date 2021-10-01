@@ -10,9 +10,11 @@
           <e p="DialogueSystem" t="Include">
             <e p="DialogueActivator.cs" t="Include" />
             <e p="DialogueObject.cs" t="Include" />
+            <e p="DialogueResponseEvents.cs" t="Include" />
             <e p="DialogueUI.cs" t="Include" />
             <e p="IInteractable.cs" t="Include" />
             <e p="Response.cs" t="Include" />
+            <e p="ResponseEvent.cs" t="Include" />
             <e p="ResponseHandler.cs" t="Include" />
             <e p="TypeWriter.cs" t="Include" />
           </e>
